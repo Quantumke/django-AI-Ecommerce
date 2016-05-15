@@ -17,10 +17,11 @@ from django.conf.urls import url
 from django.contrib import admin
 from shop import views
 from crimesipoa import settings
-
+from django.contrib import admin
+admin.autodiscover()
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.catalog, name='catalog'),
+    url(r'^$', views.index, name='catalog'),
     url(r'^static/(?P<path>.*)$', 'django.views.static.serve',
      {'document_root': settings.MEDIA_ROOT}),
 
