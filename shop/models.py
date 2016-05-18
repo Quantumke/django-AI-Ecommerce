@@ -30,7 +30,7 @@ class Product(models.Model):
     sku=models.CharField(max_length=100)
     price=models.DecimalField(max_digits=9, decimal_places=2)
     old_price=models.DecimalField(max_digits=9, decimal_places=2, blank=True, default=0.00)
-    image=models.ImageField(upload_to='/images', verbose_name='images')
+    image=models.ImageField(upload_to='images/', verbose_name='images')
     is_active=models.BooleanField(default=True)
     is_bestseller=models.BooleanField(default=False)
     quantity=models.IntegerField()
